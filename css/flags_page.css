@@ -1,0 +1,205 @@
+:root{
+/* Neutral */
+        /* (Dark Mode Elements) */
+    --Dark_Blue: hsl(209, 23%, 22%);
+
+        /* (Dark Mode Background) */
+    --Very_Dark_Blue: hsl(207, 26%, 17%);
+
+        /* (Light Mode Text) */
+    --Very_Dark_Blue : hsl(200, 15%, 8%);
+
+        /* (Light Mode Input) */
+    --Dark_Gray : hsl(0, 0%, 52%);
+
+    /*  (Light Mode Background) */
+    --Very_Light_Gray: hsl(0, 0%, 98%);
+
+    /* (Dark Mode Text & Light Mode Elements) */
+    --White : hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --Font_Default : "Nunito Sans", sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+/* 
+font-family: "Nunito Sans", sans-serif; 
+- Weights: 300, 600, 800
+*/
+body{
+    height: 100vh;
+}
+
+header{
+    box-shadow: 0px 0px 3px 3px hsla(0, 0%, 0%, 0.250);
+}
+
+header,
+main{
+    background-color: var(--White);
+    color: var(--Very_Dark_Blue);
+}
+
+header h1{
+    font-size: 26px;
+    font-family: var(--Font_Default);
+    font-weight: 600;
+}
+
+header span,
+select,
+option{
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.userActions svg{
+    left: 15px;
+}
+
+.inputSearch,
+.inputSearch:focus,
+.inputSearch:active,
+select {
+    background-color: var(--White);
+    color: var(--Very_Dark_Blue);    
+    border: none !important;
+    box-shadow: 0px 0px 3px 2px hsla(0, 0%, 0%, 0.150);
+    outline: none !important;
+}
+
+::placeholder{
+    font-size: 14px !important;
+    font-weight: 500;
+}
+
+select{
+    padding: 12px;
+    border-radius: 5px;
+}
+
+option{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Modifing Card */
+#pushCards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 10px;
+}
+
+.card{
+    box-shadow: 0px 0px 8px 1px hsla(209, 26%, 17%, 0.150);
+    border-radius: 10px !important;
+    width: 100% !important;
+    height: 350px !important;
+    background-color: transparent  !important;
+}
+
+.card-body h5,
+.card-group p{
+    font-weight: 700 !important;
+}
+
+.card-body h5{
+    font-size: 22px;
+}
+
+.card-group p{
+    font-weight: 600 !important;
+}
+
+.card-group p>span{
+    font-weight: 500 !important;
+}
+
+.card img {
+    border-radius: 10px 10px 0px 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Dark Theme */
+.darkMood,
+.darkMood header{
+    background-color: #212e37;
+    color: var(--White);
+}
+
+.darkMood header{
+    background-color: #2b3743;
+}
+
+.darkMood .card{
+    box-shadow: 0px 0px 8px 1px hsla(0, 0%, 98%, 0.029);
+}
+
+.darkMood #svg > path:nth-child(1){
+    fill: var(--White);
+}
+
+.darkMood .inputSearch,
+.darkMood select{
+    background-color: #2b3743;
+    color: var(--White);
+    border: 1px solid #2b3743;
+    box-shadow: 0px 0px 8px 1px hsla(0, 0%, 98%, 0.029);
+}
+
+.darkMood ::placeholder,
+.darkMood .svgColor{
+    filter: invert(1);
+    color: var(--White);
+}
+
+.darkMood .btn__top{
+    border: 1px solid #2b3743;
+    color: var(--White);
+    background-color: #2b3743;
+}
+
+/* Strat bottom Header */
+.header__top{
+    position: fixed;
+    top: -70px;
+    left: 0;
+    right: 0;
+    background-color: var(--White);
+    z-index: 1993;
+    transform: translateY(70px);
+    transition: all .4s;
+}
+
+/* Btn To Top */
+.btn__top{
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    padding: 3px;
+    border-radius: 8px;
+    color: var(--Very_Dark_Blue);
+    border: 1px solid var(--Very_Dark_Blue);
+    background-color: var(--White);
+    z-index: 990;
+    transition: all .6s;
+}
+
+.btn__top span{
+    font-size: 20px !important;
+    font-weight: 600;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.show{
+    opacity: 1;
+    transition: opacity .4s;
+}
